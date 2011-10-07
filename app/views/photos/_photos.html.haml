@@ -1,0 +1,3 @@
+-@photos.each do |photo|
+	-img = (image_tag photo.url_sq, :size=>"#{photo.width_sq}x#{photo.height_sq}", :data=>photo.to_json)
+	=link_to img, photo_path(photo), :remote=>true, :id=>dom_id(photo), :onclick=>"$('#big').fadeOut(200)"

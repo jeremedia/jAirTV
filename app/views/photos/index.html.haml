@@ -1,0 +1,28 @@
+#container
+	#sidebar
+		#photos
+			=render :partial=>"photos"
+		#toolbar
+			=check_box_tag "atv_enabled",  true, session[:tv_enabled]
+			=select_tag "atv", options_for_select( @airplay.browse.map{|tv|tv.name}, session[:tv] ), :disabled=>!session[:tv_enabled]
+	#viewer
+		#selection
+			= will_paginate @photos
+:javascript
+	$("#photos").pageless({ totalPages: #{@photos.total_pages}, url: '/photos', loaderMsg: 'Loading more results' });
+	$("#atv").change(function(ev){
+		var check = $("#atv_enabled")
+		
+		$.post("/photos/setTV", {tv:$("#atv").val(), tv_enabled:check.is(':checked')} ) 
+		
+	})
+	$("#atv_enabled").click(function(ev){
+		var check = $("#atv_enabled")
+		if(check.is(':checked')){
+			$("#atv").removeAttr("disabled")
+		}else{
+			$("#atv").attr("disabled","disabled")
+		}
+		$.post("/photos/setTV", {tv:$("#atv").val(), tv_enabled:check.is(':checked')} ) 
+		
+	})

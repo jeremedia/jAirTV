@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  owner_id: 1
+  flickr_id: MyString
+  owner: MyString
+  secret: MyString
+  server: MyString
+  farm: MyString
+  title: MyString
+  ispublic: false
+  isfriend: false
+  isfamily: false
+  url_sq: MyString
+  height_sq: 1
+  width_sq: 1
+  url_t: MyString
+  height_t: 1
+  width_t: 1
+  url_s: MyString
+  height_s: 1
+  width_s: 1
+  url_m: MyString
+  height_m: 1
+  width_m: 1
+  url_z: MyString
+  height_z: 1
+  width_z: 1
+  url_l: MyString
+  height_l: 1
+  width_l: 1
+  url_o: MyString
+  height_o: 1
+  width_o: 1
+
+two:
+  owner_id: 1
+  flickr_id: MyString
+  owner: MyString
+  secret: MyString
+  server: MyString
+  farm: MyString
+  title: MyString
+  ispublic: false
+  isfriend: false
+  isfamily: false
+  url_sq: MyString
+  height_sq: 1
+  width_sq: 1
+  url_t: MyString
+  height_t: 1
+  width_t: 1
+  url_s: MyString
+  height_s: 1
+  width_s: 1
+  url_m: MyString
+  height_m: 1
+  width_m: 1
+  url_z: MyString
+  height_z: 1
+  width_z: 1
+  url_l: MyString
+  height_l: 1
+  width_l: 1
+  url_o: MyString
+  height_o: 1
+  width_o: 1

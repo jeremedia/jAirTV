@@ -1,0 +1,11 @@
+$("#selection").html("#{j image_tag(@photo.url_l || @photo.url_o, :class=>'loading', :id=>'big')}")
+$("#big").hide()
+$("#big").bind("load", function(){
+$("#big").fadeIn()
+})
+var settings = {cropType : 'full', followBrowserSize : true, parentElement: $("#selection")  }
+$("#big").jmc_resizr(settings);
+
+
+
+
